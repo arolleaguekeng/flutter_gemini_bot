@@ -3,13 +3,13 @@ import 'package:http/http.dart' as http;
 
 class GeminiApi {
   static Future<(String, http.Response)> geminiChatApi(
-      List<Map<String, String>> messages) async {
+      {required List<Map<String, String>> messages, required String apiKey}) async {
     var prompt = {
       "contents": {"parts": messages}
     };
     try {
       var url = Uri.parse(
-          'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDiNrEgQOfR7-Pe2yp44ecS0Lqix8qzAdM');
+          'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}');
       var response = await http.post(url,
           body: json.encode(prompt),
           headers: {'Content-Type': 'application/json'});

@@ -21,7 +21,6 @@ class ChatModel {
         'chat': chat,
         'message': message,
         'time': time,
-
       };
 
   // toJson list
