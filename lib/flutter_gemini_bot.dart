@@ -69,10 +69,6 @@ class _FlutterGeminiChatState extends State<FlutterGeminiChat> {
                 shrinkWrap: true,
                 itemCount: widget.chatList.length,
                 itemBuilder: (context, index) => ChatItemCard(
-                  isListening: widget.chatList[index].chat == 1 &&
-                          widget.chatList[index].chatType != ChatType.loading
-                      ? true
-                      : false,
                   chatItem: widget.chatList[index],
                   onTap: () {
                     // show options to copy or delete

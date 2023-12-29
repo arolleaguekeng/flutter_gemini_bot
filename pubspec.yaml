@@ -1,7 +1,7 @@
 name: flutter_gemini_bot
 description: create a customizable chatbot easily and quickly with flutter
 version: 0.0.1
-homepage:
+homepage: https://github.com/arolleaguekeng/flutter_gemini_bot
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
