@@ -4,32 +4,35 @@ import 'package:flutter_gemini_bot/models/chat_model.dart';
 import 'package:flutter_gemini_bot/utils/constants.dart';
 import 'package:flutter_gemini_bot/utils/helper_widgets.dart';
 
-class ChatItemCard extends StatelessWidget {
+class ChatItemCard extends StatefulWidget {
   final ChatModel chatItem;
   final GestureTapCallback? onTap;
   final GestureTapCallback? onLongPress;
-  bool isListening = false;
 
-  ChatItemCard({
-    Key? key,
+
+  const ChatItemCard({super.key,
     this.onTap,
     this.onLongPress,
     required this.chatItem,
-    this.isListening = false,
   });
 
   @override
+  State<ChatItemCard> createState() => _ChatItemCardState();
+}
+
+class _ChatItemCardState extends State<ChatItemCard> {
+  @override
   Widget build(BuildContext context) {
     return InkWell(
-        onLongPress: onLongPress,
-        onTap: onTap,
+        onLongPress: widget.onLongPress,
+        onTap: widget.onTap,
         child: Row(
-          mainAxisAlignment: chatItem.chat == 0
+          mainAxisAlignment: widget.chatItem.chat == 0
               ? MainAxisAlignment.end
               : MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            if (chatItem.chat == 1)
+            if (widget.chatItem.chat == 1)
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
@@ -43,14 +46,14 @@ class ChatItemCard extends StatelessWidget {
                 margin: const EdgeInsets.only(left: 0, right: 10, top: 20),
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: chatItem.chatType == ChatType.error
+                  color: widget.chatItem.chatType == ChatType.error
                       ? Colors.red.withOpacity(0.5)
-                      : chatItem.chat == 0
+                      : widget.chatItem.chat == 0
                           ? secondaryColor.withOpacity(0.5)
                           : primaryColor.withOpacity(0.1),
-                  borderRadius: chatItem.chatType == ChatType.error
+                  borderRadius: widget.chatItem.chatType == ChatType.error
                       ? const BorderRadius.all(Radius.circular(30))
-                      : chatItem.chat == 0
+                      : widget.chatItem.chat == 0
                           ? const BorderRadius.only(
                               topLeft: Radius.circular(30),
                               topRight: Radius.circular(30),
@@ -65,16 +68,16 @@ class ChatItemCard extends StatelessWidget {
                             ),
                 ),
                 child: Column(
-                  crossAxisAlignment: chatItem.chatType == ChatType.error
+                  crossAxisAlignment: widget.chatItem.chatType == ChatType.error
                       ? CrossAxisAlignment.center
                       : CrossAxisAlignment.start,
                   children: [
-                    if (chatItem.chatType == ChatType.loading)
+                    if (widget.chatItem.chatType == ChatType.loading)
                       SizedBox(height: 50, width: 50, child: loadingWidget()),
-                    if (chatItem.chatType != ChatType.loading)
+                    if (widget.chatItem.chatType != ChatType.loading)
                       RichText(
                           text: formatText(
-                        '${chatItem.message}',
+                        '${widget.chatItem.message}',
                       )),
                   ],
                 ),

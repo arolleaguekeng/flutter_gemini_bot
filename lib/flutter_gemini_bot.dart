@@ -37,6 +37,7 @@ class _FlutterGeminiChatState extends State<FlutterGeminiChat> {
   _FlutterGeminiChatState({required this.chatContext});
   @override
   void initState() {
+    super.initState();
     setState(() {
       messages.add({"text": chatContext});
     });
@@ -44,7 +45,6 @@ class _FlutterGeminiChatState extends State<FlutterGeminiChat> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: widget.chatList.isEmpty
           ? Center(

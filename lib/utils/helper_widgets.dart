@@ -10,7 +10,6 @@
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
-import 'responsive.dart';
 
 /// Returns a [SizedBox] widget with a specified height.
 ///
