@@ -1,39 +1,51 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Flutter Gemini Bot
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Description
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`flutter_gemini_bot` is a package that allows you to easily create a chat bot application in Flutter.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package provides a `FlutterGeminiChat` widget that you can use to create a chat bot interface in your Flutter application.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, you will need:
+
+- A list of `ChatModel` objects representing the chat messages or sessions
+- An API key for authenticating with the chat bot service
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here is an example of how to use the `FlutterGeminiChat` widget:
 
 ```dart
-const like = 'sample';
+List<ChatModel> chatList = []; // Your list of ChatModel objects
+String apiKey = 'your_api_key'; // Your API key
+
+FlutterGeminiChat(
+  chatContext: 'example_context',
+  chatList: chatList,
+
+  apiKey: apiKey,
+)
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## Contributing
+
+This project is open source and we welcome contributions. Please feel free to submit a pull request or open an issue.
+
+## License
+
+This project is licensed under the MIT License.
