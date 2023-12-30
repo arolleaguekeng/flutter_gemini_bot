@@ -41,7 +41,7 @@ FlutterGeminiChat(
   apiKey: apiKey,
 )
 ```
-
+ 
 
 ## Contributing
 
