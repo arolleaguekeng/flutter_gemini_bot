@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_gemini_bot/models/chat_model.dart';
 import 'package:flutter_gemini_bot/utils/constants.dart';
 import 'package:flutter_gemini_bot/utils/helper_widgets.dart';
@@ -8,18 +7,30 @@ class ChatItemCard extends StatefulWidget {
   final ChatModel chatItem;
   final GestureTapCallback? onTap;
   final GestureTapCallback? onLongPress;
+  final Color botChatBubbleColor;
+  final Color userChatBubbleColor;
 
-
-  const ChatItemCard({super.key,
+  const ChatItemCard({
+    super.key,
     this.onTap,
     this.onLongPress,
     required this.chatItem,
+    this.botChatBubbleColor = primaryColor,
+    this.userChatBubbleColor = secondaryColor,
   });
 
   @override
   State<ChatItemCard> createState() => _ChatItemCardState();
 }
 
+/// This class represents the state of a ChatItemCard widget.
+/// It is responsible for building the UI of the card.
+/// A card widget that represents a chat item.
+/// This widget displays a chat item with different styles based on the chat type.
+/// It includes a flexible container with customizable margins, padding, and decoration.
+/// The background color of the container is determined by the chat type.
+/// The content of the container includes a loading widget or a rich text widget,
+/// depending on the chat type.
 class _ChatItemCardState extends State<ChatItemCard> {
   @override
   Widget build(BuildContext context) {
@@ -49,8 +60,8 @@ class _ChatItemCardState extends State<ChatItemCard> {
                   color: widget.chatItem.chatType == ChatType.error
                       ? Colors.red.withOpacity(0.5)
                       : widget.chatItem.chat == 0
-                          ? secondaryColor.withOpacity(0.5)
-                          : primaryColor.withOpacity(0.1),
+                          ? widget.botChatBubbleColor.withOpacity(0.5)
+                          : widget.userChatBubbleColor.withOpacity(0.1),
                   borderRadius: widget.chatItem.chatType == ChatType.error
                       ? const BorderRadius.all(Radius.circular(30))
                       : widget.chatItem.chat == 0
@@ -77,7 +88,7 @@ class _ChatItemCardState extends State<ChatItemCard> {
                     if (widget.chatItem.chatType != ChatType.loading)
                       RichText(
                           text: formatText(
-                        '${widget.chatItem.message}',
+                        widget.chatItem.message,
                       )),
                   ],
                 ),
@@ -87,6 +98,7 @@ class _ChatItemCardState extends State<ChatItemCard> {
         ));
   }
 
+  /// Formats the given text by applying bold styling to the text enclosed in double asterisks.
   TextSpan formatText(String text) {
     RegExp regex = RegExp(r'\*\*(.*?)\*\*');
     List<TextSpan> spans = [];
@@ -111,17 +123,6 @@ class _ChatItemCardState extends State<ChatItemCard> {
     return TextSpan(children: spans);
   }
 }
-
-// Identifies the children of a _ListTileElement.
-enum _ListTileSlot {
-  nom,
-  description,
-  rating,
-  cookTime,
-  thumbnailUrl,
-}
-
-Iterable<_ListTileSlot> get slots => _ListTileSlot.values;
 
 @override
 bool hitTestSelf(Offset position) => true;

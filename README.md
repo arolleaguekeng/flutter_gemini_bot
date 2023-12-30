@@ -24,6 +24,7 @@ To use this package, you will need:
 
 - A list of `ChatModel` objects representing the chat messages or sessions
 - An API key for authenticating with the chat bot service
+To use the Gemini API, you'll need an API key. If you don't already have one, create a key in [Google AI Studio](https://ai.google.dev/). Get an API key.
 
 ## Usage
 

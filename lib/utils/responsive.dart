@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 
+
+/// A utility class for building responsive layouts in Flutter.
+///
+/// The [Responsive] class provides a way to conditionally render different
+/// widgets based on the screen size. It takes three parameters: [mobile],
+/// [tablet], and [desktop], which are the widgets to be displayed on mobile,
+/// tablet, and desktop screens respectively.
+///
+/// The screen size is determined using the [MediaQuery] class. The [isMobile],
+/// [isTablet], and [isDesktop] methods can be used to check the current screen
+/// size.
+///
+/// Example usage:
+/// ```dart
+/// Responsive(
+///   mobile: MobileWidget(),
+///   tablet: TabletWidget(),
+///   desktop: DesktopWidget(),
+/// )
 class Responsive extends StatelessWidget {
   final Widget mobile;
   final Widget? tablet;

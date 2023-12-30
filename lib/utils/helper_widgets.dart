@@ -60,30 +60,6 @@ Future<dynamic> customDialog(
       });
 }
 
-Future<dynamic> customShowModalBottomSheet(
-    {required BuildContext context,
-    required Widget widget,
-    insetPadding = appPadding}) {
-  return showModalBottomSheet(
-      context: context,
-      useRootNavigator: true,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-      ),
-      builder: (context) {
-        return Padding(
-          padding: const EdgeInsets.only(
-              left: appPadding * 2,
-              right: appPadding * 2,
-              top: appPadding,
-              bottom: appPadding),
-          child: Container(
-              child: widget),
-        );
-      });
-}
-
 Widget loadingWidget() {
   return Center(
     child: RefreshProgressIndicator(),
