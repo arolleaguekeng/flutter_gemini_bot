@@ -3,12 +3,11 @@ import 'package:flutter_gemini_bot/flutter_gemini_bot.dart';
 import 'package:flutter_gemini_bot/models/chat_model.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-   MyApp({super.key});
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Gemini Demo'),
     );
   }
 }
@@ -37,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   List<ChatModel> chatList = []; // Your list of ChatModel objects
   String apiKey = '[YOUR API KEY]';
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:FlutterGeminiChat(
+      body: FlutterGeminiChat(
         chatContext: 'you are a frontend app developer',
         chatList: chatList,
         apiKey: apiKey,
-      ),// This trailing comma makes auto-formatting nicer for build methods.
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

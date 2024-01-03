@@ -13,7 +13,8 @@ class GeminiApi {
   /// and the HTTP response.
   /// If an error occurs, an empty string and an HTTP response with status code 500 will be returned.
   static Future<(String, http.Response)> geminiChatApi(
-      {required List<Map<String, String>> messages, required String apiKey}) async {
+      {required List<Map<String, String>> messages,
+      required String apiKey}) async {
     var prompt = {
       "contents": {"parts": messages}
     };

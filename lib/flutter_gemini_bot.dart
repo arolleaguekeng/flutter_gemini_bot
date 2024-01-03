@@ -20,6 +20,14 @@ class FlutterGeminiChat extends StatefulWidget {
     this.errorMessage = "an error occurred, please try again later",
     this.botChatBubbleColor = primaryColor,
     this.userChatBubbleColor = secondaryColor,
+    this.botChatBubbleTextColor = Colors.black,
+    this.userChatBubbleTextColor = Colors.black,
+    this.loaderWidget = const Center(
+      child: CircularProgressIndicator(
+        color: primaryColor,
+      ),
+    ),
+    this.onRecorderTap,
   }) : super(key: key);
 
   /// The context of the chat.
@@ -43,11 +51,23 @@ class FlutterGeminiChat extends StatefulWidget {
   /// The error message to be displayed in case of an error.
   final String errorMessage;
 
-  /// The color of the chat bubble for the bot's messages.
+  /// The color of the chat bubble for the bots messages.
   final Color botChatBubbleColor;
 
   /// The color of the chat bubble for the user's messages.
   final Color userChatBubbleColor;
+
+  ///The color of text chat bubble for the bots messages.
+  final Color botChatBubbleTextColor;
+
+  ///The color of text chat bubble for the users messages.
+  final Color userChatBubbleTextColor;
+
+  /// The loader widget to be displayed in the chat body.
+  final Widget loaderWidget;
+
+  /// Recorder button onTap callback.
+  final VoidCallback? onRecorderTap;
 
   @override
   _FlutterGeminiChatState createState() => _FlutterGeminiChatState();
@@ -197,7 +217,7 @@ class _FlutterGeminiChatState extends State<FlutterGeminiChat> {
           hintText: widget.hintText,
           suffixIcon: questionController.text.isEmpty
               ? InkWell(
-                  onTap: () {},
+                  onTap: widget.onRecorderTap,
                   child: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
