@@ -12,8 +12,8 @@
 
 ##
 <div style="display: flex;">
-  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/mobile_view.png" alt="mobile view" style="flex: 1;">
-  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/desktop_view.png" alt="desktop view" style="flex: 1;">
+  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/mobile_view.png" alt="mobile view" style="flex: 1; width:20%; height:auto;">
+  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/desktop_view.png" alt="desktop view" style="flex: 1; width:50%; height:auto;">
 </div>
 
 
