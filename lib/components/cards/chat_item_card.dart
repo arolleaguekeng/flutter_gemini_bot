@@ -60,7 +60,7 @@ class _ChatItemCardState extends State<ChatItemCard> {
                   color: widget.chatItem.chatType == ChatType.error
                       ? Colors.red.withOpacity(0.5)
                       : widget.chatItem.chat == 0
-                          ? widget.botChatBubbleColor.withOpacity(0.5)
+                          ? widget.botChatBubbleColor.withOpacity(0.1)
                           : widget.userChatBubbleColor.withOpacity(0.1),
                   borderRadius: widget.chatItem.chatType == ChatType.error
                       ? const BorderRadius.all(Radius.circular(30))
