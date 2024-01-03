@@ -2,8 +2,7 @@
 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-<img alt="GitHub pull request check state" src="https://github.com/arolleaguekeng/flutter_gemini_bot/pulls">
-
+<img alt="GitHub pull request check state" src="https://img.shields.io/github/status/s/pulls/arolleaguekeng/lutter_gemini_bot/15">
 ![logo](https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/banner.png)
 
 
@@ -13,8 +12,8 @@
 
 ##
 <div style="display: flex;">
-  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/mobile_view.png" alt="mobile view" style="flex: 1;">
-  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/desktop_view.png" alt="desktop view" style="flex: 1;">
+  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/mobile_view.png" alt="mobile view" style="flex: 1;">
+  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/desktop_view.png" alt="desktop view" style="flex: 1;">
 </div>
 
 
