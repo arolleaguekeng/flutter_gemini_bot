@@ -1,7 +1,8 @@
-# ![logo](https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/logo.png) Flutter Gemini Bot
+# <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/logo.png" alt="logo"> Flutter Gemini Bot
+
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-<img alt="GitHub pull request check state" src="https://github.com/arolleaguekeng/flutter_gemini_bot/pulls">
+<img alt="GitHub pull request check state" src="https://img.shields.io/github/status/s/pulls/arolleaguekeng/flutter_gemini_bot/15">
 
 ## Description
 
