@@ -1,8 +1,11 @@
-# <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/logo.png" alt="logo"> Flutter Gemini Bot
+# Flutter Gemini Bot
 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-<img alt="GitHub pull request check state" src="https://img.shields.io/github/status/s/pulls/arolleaguekeng/flutter_gemini_bot/15">
+<img alt="GitHub pull request check state" src="https://github.com/arolleaguekeng/flutter_gemini_bot/pulls">
+
+![logo](https://github.com/arolleaguekeng/flutter_gemini_bot/blob/main/assets/banner.png)
+
 
 ## Description
 
@@ -13,7 +16,6 @@
   <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/mobile_view.png" alt="mobile view" style="flex: 1;">
   <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/desktop_view.png" alt="desktop view" style="flex: 1;">
 </div>
-
 
 
 
