@@ -8,8 +8,11 @@
 `flutter_gemini_bot` is a package that allows you to easily create a chat bot application in Flutter. It is built on top of the [Gemini API](https://ai.google.com/).
 
 ##
-<img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/desktop_view.png" alt="desktop view">
-<img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/mobile_view.png" alt="mobile view">
+<div style="display: flex;">
+  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/mobile_view.png" alt="mobile view" style="flex: 1;">
+  <img src="https://github.com/arolleaguekeng/flutter_gemini_bot/blob/master/assets/desktop_view.png" alt="desktop view" style="flex: 1;">
+</div>
+
 
 
 
@@ -42,6 +45,7 @@ Here is an example of how to use the `FlutterGeminiChat` widget:
 ```bash
 flutter pub add flutter_gemini_bot
 ```
+## Use the package
 
 ```dart
 List<ChatModel> chatList = []; // Your list of ChatModel objects
