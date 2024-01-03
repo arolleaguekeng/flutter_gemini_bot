@@ -16,4 +16,4 @@
 
 ## 0.0.
 
-* Allow Items customizations.
+* Allow Items customizations and update chat design.
